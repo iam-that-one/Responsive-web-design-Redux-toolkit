@@ -9,7 +9,7 @@
     align-items: center;
     padding: 10px;
     background-color:whitesmoke;
-    box-shadow: inset 2px 2px 10px gray;
+    box-shadow: inset 2px 2px 10px rgb(177, 181, 184);
     
 
 }
@@ -29,7 +29,7 @@
 .description-text{
     padding: 20px;
     border-radius: 10px;
-    height: 300px;
+    height: 250px;
     width: 300px;
 }
 .author-input{
@@ -38,25 +38,36 @@
     margin: 10px;
     border-radius: 5px;
     border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .title-input{
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-radius: 5px;
     border-style: solid;
     border: none;
 }
 
 .addBlog-button{
-    padding-left: 10px;
-    padding-right: 10px ;
+    padding-left: 20px;
+    padding-right: 20px ;
     padding-top: 5px;
     padding-bottom: 5px;
+    width: 100%;
+    background-color:lightblue;
+    margin: 5px;
+    border: none;
+    color: white;
+    border-radius: 10px;
 }
 .selected-image{
     width: 200px;
     height: 100px;
-    object-fit: contain;
+    object-fit: fill;
+    border-radius: 10px;
    
     
 }
@@ -71,4 +82,7 @@ input[type="file"] {
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
+}
+.blog-url{
+    width: 100%;
 }

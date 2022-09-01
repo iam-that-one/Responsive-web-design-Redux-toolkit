@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom'
 import { actions } from '../store'
 import '../styles/addBlog.css'
 import { useNavigate } from 'react-router-dom'
+import placeholder from '../images/placeholder.jpg'
 const AddBlog = () => {
     const [image, setImage] = useState(null)
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
     const [decription, setDecription] = useState('')
+    const [url, setUrl] = useState('')
     const dispatch = useDispatch()
     var today = new Date()
     const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
@@ -25,7 +27,8 @@ const onImageChange = (event) => {
             title : title,
             author : author,
             date:  date,
-            desciption: decription
+            desciption: decription,
+            more: url
         }))
         navigate("/blogs");
     }
@@ -35,9 +38,14 @@ const onImageChange = (event) => {
         <label for="file-upload" class="custom-file-upload">
               Choose Photo
         </label>
-        <input id="file-upload" type="file" onChange={onImageChange} className="image-input" />
+       
+             <input id="file-upload" type="file" onChange={onImageChange} className="image-input" />
+         
       <div className='add-blog-image-container'>
-      <img className='selected-image' src={image} alt="  preview image" />
+      { image !== null ?
+          <img className='selected-image' src={image} alt="  preview image" />
+          :<img  className='selected-image' src={placeholder} alt='placeholder'/>
+      }
       </div>
       <div>
       
@@ -51,6 +59,7 @@ const onImageChange = (event) => {
       <div>
         <textarea className='description-text' onChange={(e)=>setDecription(e.target.value)} placeholder='Description'></textarea>
       </div>
+      <input placeholder='url' onChange={(e)=>setUrl(e.target.value)} className='blog-url' type="text"></input>
       <button className='addBlog-button' onClick={addBlog}> Blog it</button>
     </div>
   )
