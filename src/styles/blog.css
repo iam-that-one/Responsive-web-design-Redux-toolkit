@@ -1,6 +1,5 @@
 body{
     margin: 20px;
-    background-color: whitesmoke;
 }
 h4{
     margin-top: 0;
@@ -25,7 +24,7 @@ p{
 }
 
 .blog{
-    background-color: lightblue;
+    background-color: whitesmoke;
     width: 350px;
     height: 640px;
     margin: 10px;
@@ -38,8 +37,8 @@ p{
     
 }
 .blog:hover{
-    background-color: whitesmoke;
-    transform: scale(1.10);
+    background-color: darkgray;
+    transform: scale(1.015);
     transition: ease 1s;
     
 }

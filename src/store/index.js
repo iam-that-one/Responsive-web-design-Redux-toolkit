@@ -40,7 +40,7 @@ const blogs =
 ];
 const listSlice = createSlice({
     name: 'blogs',
-    initialState: {blogs : blogs},
+    initialState: {blogs : []},
     reducers:{
        addBlog(state,action){
         state.blogs.push(action.payload);
