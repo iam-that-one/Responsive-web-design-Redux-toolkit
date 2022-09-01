@@ -1,0 +1,64 @@
+body{
+    padding-top: 100px;
+}
+.nave{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(63, 26, 26);
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+    align-self: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding: 10px;
+}
+.link:hover{
+    background-color: rgb(183, 211, 183);
+    color: black;
+}
+
+.nave button.icon{
+    display: none;
+    color: aqua;
+    position: absolute;
+    right: 10px;
+}
+
+@media screen and (max-width: 600px){
+    .nave button.icon{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: block;
+        background-color: transparent;
+        border: none;
+        
+    }
+    .link:not(:first-child){
+        display: none;
+    }
+    .nave button.icon{
+        top: 15px;
+    }
+   
+}
+@media screen and (max-width: 600px) {
+   .nave .link.responsive {
+        display: block;
+        text-align: left;
+        padding-top: 20px;
+    
+    }
+    .nave button.icon{
+        display: block;
+    }
+}
